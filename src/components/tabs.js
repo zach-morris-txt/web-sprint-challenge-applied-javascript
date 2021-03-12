@@ -1,4 +1,8 @@
 const Tabs = (topics) => {
+  const newTopics = document.createElement("div");
+  const newTab = document.createElement("div");
+  newTopics.appendChild(newTab);
+  newTab.textContent = topics;
   // TASK 3
   // ---------------------
   // Implement this function which takes an array of strings ("topics") as its only argument.
@@ -16,6 +20,9 @@ const Tabs = (topics) => {
 }
 
 const tabsAppender = (selector) => {
+  topicsSource.src = "https://lambda-times-api.herokuapp.com/topics";
+  Tabs(topicsSource);
+  tabs-container.appendChild(Tabs);
   // TASK 4
   // ---------------------
   // Implement this function which takes a css selector as its only argument.

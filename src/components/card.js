@@ -1,4 +1,27 @@
 const Card = (article) => {
+  //Creating Elements
+  const card = document.createElement("div");
+  const newHeadline = document.createElement("div");
+  const newAuthor = document.createElement("div");
+  const newImgContainer = document.createElement("div");
+  const newImg = document.createElement("img");
+  const newAuthorName = document.createElement("span");
+  //Element Hierarchy
+  card.appendChild(newHeadline);
+  card.appendChild(newAuthor);
+  newAuthor.appendChild(newImgContainer);
+  newAuthor.appendChild(newAuthorName);
+  newImgContainer.appendChild(newImg);
+  //Text Content
+  newHeadline.textContent = headline;
+  newImg.textContent = authorPhoto;
+  newAuthorName.textContent = `By ${authorName}`;
+  //Event Listener
+  card.addEventListener("click", (event) => {
+    console.log(headline);
+  })
+
+
   // TASK 5
   // ---------------------
   // Implement this function, which should return the markup you see below.
