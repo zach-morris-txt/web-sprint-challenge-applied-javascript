@@ -3,12 +3,14 @@ import axios from "axios"
 const Tabs = (topics) => {
   //Instantiate
   const tabTopics = document.createElement('div')
-  
   //CSS CLASS
   tabTopics.classList.add('topics')
-  const topics = re
-  topics.forEach(topics => {
-    //INSTANTIATE TAB
+
+
+
+
+    console.log(topics)
+     //INSTANTIATE TAB
     const tabTab = document.createElement('div')
     //VALUE SET TAB
     tabTab.textContent = topics
@@ -16,7 +18,8 @@ const Tabs = (topics) => {
     tabTab.classList.add('tab')
     //HIERARCHY TAB
     tabTopics.appendChild(tabTab)
-  })
+    console.log(topics)
+    //return tabTab
   return tabTopics
 
   // TASK 3
